@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Relative Position</title>
+        <style>
+            body {
+                background-color: #222;
+            }
+
+            .parent {
+                /*border: 2px solid orange;
+                padding: 10px;
+                display: inline-block;*/
+            }
+            .parent div {
+                width: 100px;
+                height: 100px;
+            }
+            .parent .child-1 {
+                background-color: #555;
+                position: absolute;
+                left: 100px;
+                bottom: 675px;
+                z-index: 1;
+            }
+            .parent .child-2 {
+                background-color: #888;
+
+                /* POSITION RIGHT HERE!!! :) */
+               /* position: relative;
+                top: 50px;
+                left: 50px;
+                z-index: -1; */
+
+                position: absolute;
+                left: 50px;
+                bottom: 730px;
+            }
+            .parent .child-3 {
+                background-color: #BBB;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: -1;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            HW1: Formula browser calculates
+            BODY height???
+            Answer: Elementele HTML si body proprietatile CSS a inaltimei sunt setate la auto, de aici concluzia este ca inaltimea lui body se va intinde la 100% pe toata pagina.
+        -->
+
+        <div class="parent">
+            <div class="child-1">
+                1
+            </div>
+            <div class="child-2">
+                2
+            </div>
+            <div class="child-3">
+                3
+            </div>
+
+        </div>
+
+
+    </body>
+</html>
